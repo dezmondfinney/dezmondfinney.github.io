@@ -1,0 +1,93 @@
+#+TITLE: Resume
+#+OPTIONS: num:nil toc:1
+#+OPTIONS: html-style:nil html-postamble:""
+#+HTML_HEAD: <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet" type="text/css" />
+#+HTML_HEAD: <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+#+HTML_HEAD: <link href="css/main.css" rel="stylesheet" type="text/css" />
+#+HTML_HEAD: <link href="css/resume.css" rel="stylesheet" type="text/css" />
+#+HTML_CONTAINER: section
+
+#+BEGIN_menu
+#+HTML: <input type="checkbox" id="menu-toggle">
+#+HTML: <label for="menu-toggle"><i class="fas fa-bars"></i></label>
+#+INCLUDE: "sitemap.org"
+#+END_menu
+
+#+BEGIN_EXPORT html
+<script> window.location.href="#about" </script>
+#+END_EXPORT
+
+* About
+:PROPERTIES:
+:CUSTOM_ID: about
+:END:
+
+When I was introduced to the web it was early days. A web site was a HTML file
+and maybe a CGI scripts. Things changed quickly and soon php and server side
+frameworks where on my radar. The amount of power that the web could provide was
+growing.
+
+I learned the hacks necessary to create usable interfaces. Table layouts and
+sliding door tabs anyone? It was not fun and fun at the same time. I'm glad we
+are past the days of transparent gifs and what not. I was on board when the CSS
+Revolution started.
+
+* My Work
+:PROPERTIES:
+:CUSTOM_ID: work
+:END:
+** HenriLloyd
+
+[[./img/henrilloydonline_screenshot.png]]
+
+https://www.henrilloydonline.com
+
+- Design & Layout
+- Markup & CSS
+- Custom CMS updates PHP & SQL
+
+The Henri Lloyd Online project was a redesign project with a handfull of CMS
+custom updates. I created the initial layout and design tools using atomic
+design principles. After approval from the client I did the primary markup and
+CSS. This required modification of the CMS. The CMS was custom tiny PHP
+applications that required new SQL querys and php functions to dispaly new
+elements and features of the redesign.
+
+** R&D
+
+[[./img/randd.png]]
+
+https://www.randdcomp.com
+
+- Design & Layout
+- CSS
+
+R&D project was a redsign project that allowed the use of newer css design tools
+like flexbox but maintain backwards compatability - a major concern for R&D
+who’s customers frequently run legacy systems.
+
+* Skills
+:PROPERTIES:
+:CUSTOM_ID: skills
+:END:
+** Client Side
+- JAMstack
+- ReactJS
+- webcomponents
+
+** Server Side
+- Joomla
+- Wordpress
+- express.js
+- Ruby on Rails
+
+* Education
+:PROPERTIES:
+:CUSTOM_ID: education
+:END:
+
+** US Army & Air Force Collage
+Multimedia Design (25M)
+
+** Virginia Collage
+3d Animation & CAD

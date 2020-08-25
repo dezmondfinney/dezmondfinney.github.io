@@ -1,0 +1,79 @@
+#content > .title {
+  display: none;
+}
+h2#contactCard {
+  display: none;
+}
+#text-contactCard {
+  display: grid;
+  grid-template-columns: 15vw 70vw 15vw;
+  grid-template-rows: 15vh 70vh 15vh;
+}
+.card {
+  background-color: #fff;
+  box-shadow: 0px 0px 14px 4px #1b1b1b9e;
+  border-radius: 5px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+.card > ul.org-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.card > ul.org-ul li {
+  padding: 5px 0;
+}
+.card > p {
+  display: none;
+}
+.card > .figure {
+  flex: 1;
+}
+.card > .figure p {
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.card > .figure .org-svg {
+  width: 45%;
+}
+@media screen and (orientation: landscape) {
+  .card {
+    flex-direction: row;
+  }
+}
+.vcard {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+.vcard .fa-card {
+  display: inline-block;
+  padding: 5px;
+}
+.vcard p {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px 5px;
+}
+.vcard a {
+  text-decoration: none;
+}
