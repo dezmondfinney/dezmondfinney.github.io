@@ -12,25 +12,16 @@
 
 <body class="bg-gray-800">
     <style>
-        h1 {
-            font-size: 6vw;
-            text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
-        }
-    </style>
-    <main id="main" class="container m-auto">
-        <div class="grid h-screen grid-cols-12 grid-rows-3">
-            <div class="col-start-2 col-end-12 row-start-2 row-end-3 flex border-box items-center border rounded-lg bg-gray-400 shadow-2xl">
-                <div class="flex-auto">
-                    <h1 class="text-right text-gray-800 font-bold">
-                        I'm Dez &
-                        <br /> I make Stuff
-                    </h1>
-                </div>
+  .card { aspect-ratio: 2 / 1; }
+  .card figure svg { max-height: 100%; }
+  .title { font-size: 9.5vw; }
+</style>
 
-                <figure class="flex-1 w-auto px-6">
-                    <svg viewBox="0 0 123 176" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M72.9047 0.0639578C70.7733 -0.0449798 68.6263 -0.0117613 66.4831
+<div class="bg-blue-200 h-screen w-screen p-10">
+  <div class="card flex bg-gray-200 rounded-xl shadow-xl p-5">
+    <figure class="flex-1 flex flex-col justify-center">
+      <svg viewBox="0 0 123 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M72.9047 0.0639578C70.7733 -0.0449798 68.6263 -0.0117613 66.4831
           0.140796C49.3376 1.36127 33.4434 11.0346 24.7826 25.5165C16.1219
           39.9984 15.322 58.2517 22.675 73.4056C28.0966 84.5791 36.9259 92.7977
           44.7169 100.491C52.4752 108.152 59.5621 115.817 62.7799 124.503C65.652
@@ -59,10 +50,8 @@
           70.8655 116.986 70.6128 117.726 70.2106C118.466 69.8083 119.115
           69.2647 119.635 68.6123C120.155 67.9599 120.534 67.2121 120.751
           66.4134C125.769 50.3788 122.258 32.433 111.532 19.331C102.148 7.86682
-          87.824 0.826527 72.9047 0.0639578Z"
-          fill="#7D3FFF" />
-        <path
-          d="M81.4732 96.5915C80.6379 96.58 79.8086 96.7305 79.0335
+          87.824 0.826527 72.9047 0.0639578Z" fill="#7D3FFF"></path>
+        <path d="M81.4732 96.5915C80.6379 96.58 79.8086 96.7305 79.0335
           97.0342C78.2584 97.338 77.5529 97.7889 76.9581 98.3608C76.3633 98.9328
           75.8909 99.6143 75.5685 100.366C75.2461 101.117 75.0801 101.924
           75.0801 102.739C75.0801 103.553 75.2461 104.36 75.5685 105.111C75.8909
@@ -73,14 +62,17 @@
           106.544 104.705 105.863 105.027 105.111C105.35 104.36 105.516 103.553
           105.516 102.739C105.516 101.924 105.35 101.117 105.027 100.366C104.705
           99.6143 104.232 98.9328 103.638 98.3608C103.043 97.7889 102.337 97.338
-          101.562 97.0342C100.787 96.7305 99.9578 96.58 99.1225 96.5915H81.4732Z"
-          fill="#7D3FFF" />
+          101.562 97.0342C100.787 96.7305 99.9578 96.58 99.1225 96.5915H81.4732Z" fill="#7D3FFF"></path>
       </svg>
-                </figure>
-            </div>
-        </div>
-
-    </main>
+    </figure>
+    
+    <div class="text-right flex flex-col justify-center content-center">
+      <h1 class="title font-bold text-gray-600">
+        I'm Dez & <br> I make Stuff
+      </h1>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>
