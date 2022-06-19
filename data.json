@@ -1,0 +1,30 @@
+{
+  "navigation": [
+    {
+      "name": "home",
+      "path": "/"
+    },
+    {
+      "name": "about",
+      "path": "/about"
+    },
+    {
+      "name": "blog",
+      "path": "/blog"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Art",
+      "tag": "Art",
+      "description": "This is a random bit of text. Find more information in my notebook.",
+      "url": "https://art.com"
+    },
+    {
+      "name": "CSS Project",
+      "tag": "code",
+      "description": "This is a random bit of text. Find more information in my notebook.",
+      "url": "https://art.com"
+    }
+  ]
+}
