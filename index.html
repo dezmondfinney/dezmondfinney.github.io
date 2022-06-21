@@ -40,13 +40,14 @@
         <div id="projects">
 
             <ul class="flex flex-wrap items-center justify-center">
-                <li v-for="project in projects" class="w-[350px] m-4 self-start">
-                    <figure class="bg-gray-300 p-6 rounded-xl">
-                        <img :src="project.image" alt="alt tag" class="rounded-xl">
-                    </figure>
-
+                <li v-for="project in projects" class="w-[300px] m-4 self-start">
+                    <a :href="project.url" class="bg-gray-100 p-6 rounded-xl flex justify-center items-center aspect-square shadow-lg">
+                        <figure class="">
+                            <img :src="project.image" alt="alt tag" class="rounded-xl">
+                        </figure>
+                    </a>
                     <h3 class="text-3xl">
-                        <a :href="project.url" class="inline-block">{{ project.name }}</a>
+                        {{ project.name }}
                     </h3>
                     <p>
                         {{ project.description }}
@@ -90,31 +91,31 @@
                     "tag": "logo",
                     "description": "Logo Design for digital and print use.",
                     "url": "https://art.com",
-                    "image": "/img/ajm-logo.png"
-                }, {
-                    "name": "BombBee",
-                    "tag": "logo",
-                    "description": "This is a random bit of text. Find more information in my notebook.",
-                    "url": "https://art.com",
-                    "image": "/img/ajm-logo.png"
+                    "image": "/img/12am-pickup.png"
                 }, {
                     "name": "Ciao Bella",
                     "tag": "logo",
                     "description": "This is a random bit of text. Find more information in my notebook.",
                     "url": "https://art.com",
-                    "image": "/img/ajm-logo.png"
+                    "image": "/img/ciao-bella-logo.png"
+                }, {
+                    "name": "BombBee",
+                    "tag": "logo",
+                    "description": "This is a random bit of text. Find more information in my notebook.",
+                    "url": "https://art.com",
+                    "image": "/img/bee-logo.png"
                 }, {
                     "name": "MTA",
                     "tag": "logo",
                     "description": "This is a random bit of text. Find more information in my notebook.",
                     "url": "https://art.com",
-                    "image": "/img/ajm-logo.png"
+                    "image": "/img/mta-logo.png"
                 }, {
                     "name": "Miggity Media",
                     "tag": "print",
                     "description": "This is a random bit of text. Find more information in my notebook.",
                     "url": "https://art.com",
-                    "image": "/img/ajm-logo.png"
+                    "image": "/img/mm_logo.svg"
                 }]
             }
         }
