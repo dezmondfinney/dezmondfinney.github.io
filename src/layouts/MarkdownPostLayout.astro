@@ -1,36 +1,18 @@
 ---
+import BaseLayout from './Page.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{frontmatter.title}</title>
-  </head>
-  <body class="bg-gray-50 h-screen">
-    <header>
-      <ul
-        class="flex justify-around min-w-full border-t text-[#88a65e] bg-white border-b border-gray-700"
-      >
-        <li><a href="/">Home</a></li>
-        <li><a href="/journal">Journal</a></li>
-        <li><a href="/work">My Work</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </header>
-    <div class="prose mx-auto mt-6 bg-white p-6">
+<BaseLayout title={frontmatter.title}>
+    <div class="prose mx-auto mt-6 shadow-2xl shadow-gray-800 bg-white p-6 w-[80vw] rounded-lg">
       <h1>{frontmatter.title}</h1>
       <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
       <p>Written by {frontmatter.author}</p>
       <hr />
       <slot />
     </div>
-  </body>
-</html>
+</BaseLayout>
+
 <style is:global>
   :root {
     --accent: 124, 58, 237;
