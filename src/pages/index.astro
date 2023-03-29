@@ -27,12 +27,12 @@ import Layout from "../layouts/Layout.astro";
         </figure>
 
         <h1 class="title font-bold text-[#88a65e]">Dez Finney</h1>
-        <h2 class="text-[#88a65e] pb-2">i make Stuff</h2>
+        <h2 class="text-[#88a65e] pb-2">i make stuff</h2>
         <ul class="flex justify-around min-w-full border-t text-[#88a65e]">
           <li><a href="/">Home</a></li>
-          <li><a href="/">Journal</a></li>
-          <li><a href="/">Folio</a></li>
-          <li><a href="/">Contact</a></li>
+          <li><a href="/journal">Journal</a></li>
+          <li><a href="/work">My Work</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -57,34 +57,6 @@ import Layout from "../layouts/Layout.astro";
         radial-gradient(var(--_r) left var(--_g0)) calc(var(--_s) / 2) var(--s),
         linear-gradient(90deg, #88a65e 50%, #bfb35a 0);
       background-size: var(--_s) calc(4 * var(--s));
-    }
-
-    .old {
-      --s: 120px; /* control the size */
-      --c1: #4e395d;
-      --c2: #8ebe94;
-
-      --_g: var(--c1) 15%, var(--c2) 0 28%, #0000 0 72%, var(--c2) 0 85%,
-        var(--c1) 0;
-      background: conic-gradient(from 90deg at 2px 2px, #0000 25%, var(--c1) 0) -1px -1px,
-        linear-gradient(-45deg, var(--_g)), linear-gradient(45deg, var(--_g)),
-        conic-gradient(from 90deg at 40% 40%, var(--c1) 25%, var(--c2) 0)
-          calc(var(--s) / -5) calc(var(--s) / -5);
-      background-size: var(--s) var(--s);
-    }
-
-    .old2 {
-      --s: 80px; /* control the size */
-      --c: #542437;
-
-      --_g: #0000 calc(-650% / 13) calc(50% / 13), var(--c) 0 calc(100% / 13),
-        #0000 0 calc(150% / 13), var(--c) 0 calc(200% / 13),
-        #0000 0 calc(250% / 13), var(--c) 0 calc(300% / 13);
-      --_g0: repeating-linear-gradient(45deg, var(--_g));
-      --_g1: repeating-linear-gradient(-45deg, var(--_g));
-      background: var(--_g0), var(--_g0) var(--s) var(--s), var(--_g1),
-        var(--_g1) var(--s) var(--s) #c02942;
-      background-size: calc(2 * var(--s)) calc(2 * var(--s));
     }
   </style>
 </Layout>
