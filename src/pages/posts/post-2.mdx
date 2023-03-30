@@ -1,16 +1,68 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'How does mdx work'
+title: 'Mdx & Svelte'
 pubDate: 2023-03-18
 description: 'This is the first post of my new Astro Journal'
 author: Dezmond Finney
 image:
-    url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 
+    url: ' https://loremflickr.com/640/360' 
     alt: 'The Astro logo with the word One.'
 tags: ["astro", "blogging", "learning in public"]
 ---
+import Bouncing from '../../components/bouncing.svelte'
 
-## Learning
+## How does mdx and svelte work?
 
-Learning how to do.
+AstroJS is a new static site generator that has been gaining popularity in the web development community due to its ease of use and flexibility. Unlike traditional static site generators, AstroJS allows developers to use dynamic elements in their static sites, thanks to its built-in support for the Svelte JavaScript framework.
 
+Svelte is a lightweight JavaScript framework that allows you to create dynamic web applications using a simple and intuitive syntax. With Svelte, you can add dynamic elements to your web pages, such as forms, interactive charts, and more, without the need for complex JavaScript code. This makes it an ideal choice for building dynamic elements in a static site generator like AstroJS.
+
+To use Svelte with AstroJS, you first need to install the Svelte package and add it to your AstroJS project. You can do this using the following command:
+
+``` bash
+npm install @astrojs/svelte
+npm install svelte
+``` 
+
+``` javascript
+import { defineConfig } from 'astro/config';
+import svelte from '@astrojs/svelte';
+
+export default defineConfig({
+  // ...
+  integrations: [svelte()],
+});
+```
+Once you have installed Svelte, you can start creating dynamic elements in your AstroJS site. To do this, you need to create a Svelte component and import it into your AstroJS template.
+
+For example, let's say you want to add a bouncing ball and a interactive form. You can create a Svelte component that renders the component and accepts data as props. Here's an example:
+
+``` html
+<script>
+	let name = 'world';
+</script>
+<div class="border prose bg-gray-500 rounded-2xl p-4">
+  <input class="border border-red-400 p-1" bind:value={name}>
+  <h3>Hello {name}!</h3>
+  <div class="container">
+    <div class="ball"></div>
+  </div>
+</div>
+``` 
+We are also using Svelte's reactive properties to update the component whenever the data changes.
+
+Once you have created your Svelte component, you can import it into your AstroJS template using the `<Bouncing>` tag:
+
+```html
+<!-- post.mdx -->
+---
+import Bouncing from './Bouncing.svelte';
+---
+
+<Bouncing name={Dez} client:only="svelte" />
+```
+With these steps, you can easily add dynamic elements to your AstroJS site using the power of Svelte. Whether you want to add interactive charts, forms, or other dynamic elements, Svelte makes it easy to create complex web applications using a simple and intuitive syntax.
+
+In conclusion, AstroJS and Svelte make a powerful combination for building static sites with dynamic elements. With AstroJS's flexible and easy-to-use static site generator and Svelte's lightweight and intuitive framework, developers can create dynamic web applications with ease. Whether you are building a simple blog or a complex web application, AstroJS and Svelte are the perfect tools for the job.
+
+<Bouncing name={"Dez"} client:only="svelte"/>
