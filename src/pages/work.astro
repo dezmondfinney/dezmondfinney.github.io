@@ -1,32 +1,23 @@
 ---
 import Page from "../layouts/Page.astro";
 
-const identity = {
-    firstName: "Dezmond Finney",
-    country: "US",
-    occupation: "Designer",
-    hobbies: ["Fashion", "Games", "basketball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "Svelte", "Astro"];
-
+const allWork = await Astro.glob('../pages/work/*.mdx');
 ---
 
 <Page title="Work">
     <main class="bg-white p-6 mt-6 w-[80vw] mx-auto border border-gray-500 shadow-xl shadow-black/40 rounded-xl">
         <div class="prose">
             <h1 class="">Work</h1>
-            <p>Here are a few facts about me:</p>
-            <ul>
-                <li>My name is {identity.firstName}.</li>
-                <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-                {identity.hobbies.length >= 2 && <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>}
-            </ul>
-            <p>My skills are:</p>
-            <ul>
-                {skills.map((skill) => <li>{skill}</li>)}
-            </ul>
         </div>
+        <ul class="flex">
+          {allWork.map((work) => {
+            return (
+              <li>
+                <a class="block m-10 h-80 w-80 border" href={work.url}>{work.frontmatter.title}</a>
+              </li>
+            );})}
+        </ul>
+
     </main>
 </Page>
 

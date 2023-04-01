@@ -1,10 +1,15 @@
 <script>
 	export let name = "world";
+	// fetch the tasks.json file and load it into the tasks variable
+  import tasks from "../../public/tasks.json";
 </script>
 
 <div class="border prose bg-gray-500 rounded-2xl p-4">
   <input class="border border-red-400 p-1" bind:value={name}>
   <h3>Hello {name}!</h3>
+  {#each tasks as task}
+    <p>{task.description}</p>
+  {/each}
   <div class="container">
     <div class="ball"></div>
   </div>
