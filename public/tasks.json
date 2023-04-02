@@ -4,7 +4,9 @@
     "description": "Finish project report",
     "entry": "20230331T150000Z",
     "modified": "20230331T150000Z",
+    "due": "20230401T150000Z",
     "status": "pending",
+    "project": "leisure",
     "uuid": "8825b8ca-67cb-4d2f-8c06-bda96a33eef2",
     "urgency": 0.142466
   },
@@ -13,6 +15,7 @@
     "description": "Research vacation destinations",
     "entry": "20230401T080000Z",
     "modified": "20230401T080000Z",
+    "scheduled": "2023050T150000Z",
     "project": "leisure",
     "status": "pending",
     "uuid": "d85f51fc-fab4-4a4b-9644-4aa95d11c9dc",

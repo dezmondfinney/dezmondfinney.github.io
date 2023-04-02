@@ -1,25 +1,33 @@
 <script>
   export let task;
 </script>
-<div class="flex self-center min-h-12 items-center px-2 py-3 m-2 text-gray-600 rounded-[4px] shadow-md bg-white" >
+
+<link rel="stylesheet" href="../all.min.css">
+
+<div class="flex self-center min-h-12 items-center px-2 py-3 text-gray-600 rounded-[4px] shadow-md bg-white" >
   <div class="pr-3">
-    <!-- <Circle /> -->
-    <div class="w-5 h-5 rounded-full border border-red bg-gray-300"></div>
+    <i class="fa-solid fa-circle-check"></i>
   </div>
   <div>
-    <div class="description cursor-pointer"> {task.description} </div>
+    <div class="description cursor-pointer">
+      {task.description} </div>
 
-    <div class="flex details">
+    <div class="flex details items-center">
+      {#if task.project}
+        <i class="fa-solid fa-diagram-project"></i>
+        {task.project}
+      {/if}
+
       {#if task.annotations}
-        <!-- <Note /> -->
+        <i class="fa-regular fa-note-sticky"></i>
       {/if}
 
       {#if task.due}
-        <!-- <Alarm /> -->
+        <i class="fa-solid fa-bell"></i>
       {/if}
 
       {#if task.scheduled}
-      <!-- <Calendar /> -->
+        <i class="fa-regular fa-calendar"></i>
       {/if}
     </div>
   </div>
