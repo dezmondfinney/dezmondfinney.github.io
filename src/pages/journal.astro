@@ -1,17 +1,15 @@
 ---
 import Page from "../layouts/Page.astro";
-const allPosts = await Astro.glob('../pages/posts/*.mdx');
+const allPosts = await Astro.glob("../pages/posts/*.mdx");
 ---
 
 <Page title="Journal">
-  <main class="bg-white p-6 mt-6 w-[80vw] mx-auto border border-gray-500 shadow-xl shadow-black/40 rounded-xl">
-    <div class="">
-      <h1 class="">Journal</h1>
-      <ul>
-        <ul>
-          {allPosts.map((post) => <li><a href={post.url}><img src={post.frontmatter.image.url} alt="">{post.frontmatter.title}</a></li>)}
-        </ul>
-      </ul>
+  <main
+    class="bg-white p-6 mt-6 w-[80vw] mx-auto border border-gray-500 shadow-xl shadow-black/40 rounded-xl"
+  >
+    <div class="text-slate-500 prose-slate text-center">
+      <h1 class="text-6xl p-6">My Journal</h1>
+      <h2 class="text-4xl">Coming Soon</h2>
     </div>
   </main>
 </Page>
