@@ -11,7 +11,24 @@ const allPosts = await Astro.glob("../pages/posts/*.mdx");
       <h1 class="text-6xl p-6">My Journal</h1>
       <h2 class="text-4xl">Coming Soon</h2>
     </div>
+    <div class="">
+      <h1 class="">Journal</h1>
+      <ul>
+        <ul>
+          {
+            allPosts.map((post) => (
+              <li>
+                <a href={post.url}>
+                  <img src={post.frontmatter.image.url} alt="" />
+                  {post.frontmatter.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </ul>
+    </div>
   </main>
-</Page>
 
-<style></style>
+  <style></style>
+</Page>

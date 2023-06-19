@@ -5,13 +5,16 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout title={frontmatter.title}>
   <div class="bg-white p-6 mt-6 w-[80vw] mx-auto border border-gray-500 shadow-xl shadow-black/40 rounded-xl">
-    <div class="prose">
-      <h1>{frontmatter.title}</h1>
-      <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
-      <p>Written by {frontmatter.author}</p>
-    </div>
     <div class="">
-      <slot />
+      <h1 class="text-4xl font-extrabold">{frontmatter.title}</h1>
+      <section class="border p-2 mt-4 mb-4 text-gray-500 rounded">
+
+      <p class="m-0">Published on: {frontmatter.pubDate.slice(0, 10)}</p>
+      <p class="m-0">Written by {frontmatter.author}</p>
+      </section>
+      <article class="prose">
+        <slot />
+      </article>
     </div>
   </div>
 </BaseLayout>
