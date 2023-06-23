@@ -1,31 +1,42 @@
 ---
 import Page from "../layouts/Page.astro";
 const allPosts = await Astro.glob("../pages/posts/*.mdx");
+
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  return date.toLocaleDateString("en-US", options);
+}
 ---
 
 <Page title="Journal">
   <main
     class="bg-white p-6 mt-6 w-[80vw] mx-auto border border-gray-500 shadow-xl shadow-black/40 rounded-xl"
   >
-    <div class="text-slate-500 prose-slate text-center">
-      <h1 class="text-6xl p-6">My Journal</h1>
-      <h2 class="text-4xl">Coming Soon</h2>
-    </div>
     <div class="">
-      <h1 class="">Journal</h1>
-      <ul>
-        <ul>
-          {
-            allPosts.map((post) => (
-              <li>
-                <a href={post.url}>
+      <h1 class="text-6xl py-6">Journal</h1>
+      <ul class="@container flex flex-wrap">
+        {
+          allPosts.map((post) => (
+            <li class=" @2xl:w-1/2 w-full p-2">
+              <a
+                href={post.url}
+                class="flex flex-col border p-6 justify-between rounded-xl shadow-xl shadow-black/40 h-full"
+              >
+                <div class="flex-1">
                   <img src={post.frontmatter.image.url} alt="" />
-                  {post.frontmatter.title}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
+                </div>
+                <div class="flex-2">{post.frontmatter.title}</div>
+                <div class="flex-1">{formatDate(post.frontmatter.pubDate)}</div>
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </div>
   </main>
