@@ -5,12 +5,10 @@ pubDate: 2023-03-18
 description: 'On Zen Garden: Revolutionizing Web Design and Inspiring Future Frameworks'
 author: Dezmond Finney
 image:
-    url: '/img/CSSZenGardenLogo.webp'
+    url: '/img/welcome-sign.jpg' 
     alt: 'The Astro logo with the word One.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-
-## The Legacy of CSS Zen Garden: Revolutionizing Web Design and Inspiring Future Frameworks
 
 ### Introduction
 ------------
