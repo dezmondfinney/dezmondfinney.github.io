@@ -28,8 +28,8 @@ function formatDate(dateString) {
                 href={post.url}
                 class="flex flex-col border p-6 justify-between rounded-xl shadow-xl shadow-black/40 h-full"
               >
-                <div class="flex-1">
-                  <img src={post.frontmatter.image.url} alt="" />
+                <div class="relative w-full h-0 pb-[56.25%] overflow-hidden flex items-center justify-center aspect-square">
+                  <img class="absolute top-0 left-0 object-cover w-full h-full" src={post.frontmatter.image.url} alt="" />
                 </div>
                 <div class="flex-2">{post.frontmatter.title}</div>
                 <div class="flex-1">{formatDate(post.frontmatter.pubDate)}</div>
