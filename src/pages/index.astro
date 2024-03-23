@@ -1,44 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Logo from '../components/logo.svelte';
+import Logo from "../components/logo.svelte";
 ---
 
 <Layout title="Dez & Stuff">
   <main class="">
-    <div class="flex flex-col items-center justify-center w-screen h-screen p-10">
-      <div class="card bg-white md:max-w-[80vw] max-w-[30vw] flex flex-col justify-center items-center rounded-xl border border-gray-500 shadow-xl shadow-black/40 p-5 transition duration-300 hover:scale-105" >
-        <Logo />
-        <h1 class="title font-bold text-[#88a65e]">Dez Finney</h1>
-        <h2 class="text-[#88a65e] pb-2">i make stuff</h2>
-        <ul class="flex justify-around min-w-full border-t text-[#88a65e]">
-          <li><a href="/">Home</a></li>
-          <li><a href="/journal">Journal</a></li>
-          <li><a href="/work">My Work</a></li>
-          <li><a href="/contact">Contact</a></li>
+    <div class="">
+      <div class="flex border">
+        <!-- Headers -->
+        <div class="flex border">
+          <!-- Logo -->
+          <div class="border min-w-16">
+            <Logo />
+          </div>
+
+          <!-- Header Group -->
+          <hgroup class="flex-1 px-6">
+            <h1 class="title font-bold text-[#88a65e]">Dez Finney</h1>
+            <h2 class="text-[#88a65e] pb-2">i make stuff</h2>
+          </hgroup>
+        </div>
+
+        <!-- Menu -->
+        <ul class="flex items-center justify-between">
+          <li><a class="px-4" href="/">Home</a></li>
+          <li><a class="px-4" href="/journal">Journal</a></li>
+          <li><a class="px-4" href="/work">My Work</a></li>
+          <li><a class="px-4" href="/contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </main>
-
-  <style>
-    main {
-      --s: 55px; /* control the size */
-      --b: 15px; /* control the thickness of the curved lines */
-
-      --_r: calc(1.28 * var(--s) + var(--b) / 2) at top 50%;
-      --_f: calc(99.5% - var(--b)), #f9f2e7 calc(101% - var(--b)) 99.5%,
-        #0000 101%;
-      --_g0: calc(-0.8 * var(--s)), #88a65e var(--_f);
-      --_g1: calc(-0.8 * var(--s)), #bfb35a var(--_f);
-      --_s: calc(1.8 * var(--s) + var(--b));
-      background: radial-gradient(var(--_r) right var(--_g0))
-          calc(-1 * var(--_s)) var(--s),
-        radial-gradient(var(--_r) left var(--_g1)) var(--_s) calc(-1 * var(--s)),
-        radial-gradient(var(--_r) right var(--_g1)) calc(var(--_s) / -2)
-          calc(-1 * var(--s)),
-        radial-gradient(var(--_r) left var(--_g0)) calc(var(--_s) / 2) var(--s),
-        linear-gradient(90deg, #88a65e 50%, #bfb35a 0);
-      background-size: var(--_s) calc(4 * var(--s));
-    }
-  </style>
 </Layout>
